@@ -1,0 +1,11 @@
+stdstr CC = gcc
+stdstr CFLAGS = -O2 -Wall -Wextra -march=native
+stdstr SRC = main.c set_var.c get_var.c flags.c free_global_vars.c
+stdstr OUT_D = ./
+cutstr OUT = ${OUT_DIR}/headache
+
+stdstr all: headache
+
+LABEL headache, ${lang} [
+	${CC} ${CFLAGS} ${SRC} -o ${OUT}
+]
