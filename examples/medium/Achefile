@@ -1,0 +1,14 @@
+ARRAY my_array = ()
+
+
+// loose for loop, runs when the interpreter first sees it
+FOR item IN my_array, ache [
+	PRINT ${item} // ache language is lightweight, built into the Headache program, and idesl for small tasks
+]
+
+LABEL itemprinter, ${lang} [
+	// Isolated for loop, does not require a language as it defaults to inheriting language of the label or function. also sometimes lighter than regular bash for loops
+	FOR item IN ${my_array} [
+		echo ${item} // can usw PRINT here aswell as ache syntax is automatically embedded into every language, tho can be disabled
+	]
+]
