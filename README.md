@@ -4,7 +4,7 @@
 
 ## Info
 
-- This is a replacement for the well known make, with syntax more shell-like
+- This is a build tool, "DSL" like make, with syntax more BASIC-like
 
-- Headache is exactly what it sounds like, a headache. which you will notice from the syntax
+- Headache is exactly what it sounds like, a headache. which you will notice from the syntax in some places
 
