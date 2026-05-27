@@ -1,0 +1,16 @@
+stdstr CC = gcc // Makes sure to cut out the first and last space to make sure ' gcc ' becomes 'gcc'. does not remove the last space if the last char is not a space
+cutstr MARCHSET = -march=native // cut all spaces, tabs, newlines, etc
+exact CFLAGS = -Wall -Wextra // the exact string. cutstr would made '-Wall-Wextra' but with exact it becomes exactly, ' -Wall -Wextra'
+
+stdstr lang /= /bin/env bash // '/=' means only set variable if it is unset. normally set by Headache itself but should be there just incase. in most cases shuld by stdstr
+stdstr all: compile // all variable is mandatory and should often be stdstr. tells Headache what to execute if there is no args of what to ache
+
+LABEL compile, ${lang} [
+	${CC} ${MARCHSET} ${CFLAGS} ${SRC} -o ${OUTPUT}
+]
+
+LABEL install, ${lang} [
+	cp ${OUTPUT} ${BIN}/some_file
+]
+
+// use '//' to comment. has to have a whitespace before it.
